@@ -45,14 +45,15 @@ const particlesLoaded = useCallback(async container => {
 
 return (
   <>
-  <div style={{ position: 'absolute'}}>
+
   <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={particlesConfig}
+        height="100vh"
     />
-  </div>
+
   <ThemeProvider theme={darkTheme}>
   <CssBaseline />
   <Header/>

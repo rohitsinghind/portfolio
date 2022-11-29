@@ -1,5 +1,4 @@
 import React,{useState, cloneElement} from 'react'
-import { styles } from './styles'
 
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
@@ -91,14 +90,16 @@ export default function Header(props) {
           <Box
             sx={{ display: { sm: 'block' },mr:4 }}
           >
-            <EmojiEmotionsIcon fontSize="large"/>
+            <EmojiEmotionsIcon fontSize="large" sx={{color:"#84fff1"}}/>
           </Box>
           <Box sx={{flexGrow: 1}}>
           <Box sx={{ display: { xs:'none', sm: 'none', md: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' , fontFamily: "'Open Sans', sans-serif", fontWeight:"600", mr:1.5}}>
-                {item}
-              </Button>
+             
+                <Button key={item} sx={{ color: '#fff' , fontFamily: "'Open Sans', sans-serif", fontWeight:"600", mr:1.5}}>
+                  {item}
+                </Button>
+      
             ))}
           </Box>
           </Box>
